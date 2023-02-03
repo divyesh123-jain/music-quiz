@@ -1,7 +1,7 @@
 import React , {useState, useTransition} from 'react';
 import Cards from './components/Cards';
 import { fetchQuizQuestions } from './API';
-import {QuestionState , Difficulty } from './API';
+import {QuestionsState , Difficulty } from './API';
 
 
 
@@ -18,7 +18,7 @@ const TOTAL_QUESTIONS = 10;
 const App = () => {
 
 const [loading , setLoading] = useState(false);
-const [questions , setQuestions ] = useState<QuestionState[]>([]);
+const [questions , setQuestions ] = useState<QuestionsState[]>([]);
 const [userAnswers , setUserAnswers ] = useState<AnswerObject[]>([]);
 const [number , setNumber] = useState(0);
 const [score , setScore ] = useState(0);
